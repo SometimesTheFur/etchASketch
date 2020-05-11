@@ -5,6 +5,7 @@ html, body {
     color: #222;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 #container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -12,7 +13,7 @@ html, body {
 }
 
 .div1 {
-    background-image: linear-gradient(rgb(255, 254, 254), rgba(255, 255, 255, 0));
+    background-image: linear-gradient(rgb(255, 254, 254), rgba(238, 238, 238, 0));
     grid-row: 1/4;
     grid-column: 1/13;
     margin: 0;
@@ -24,8 +25,6 @@ html, body {
     margin-top: .5rem;
     color: rgba(43, 67, 92, 0.76);
     /*text-shadow: 0px 0px 10px rgba(255, 0, 85, 0.411);*/
-
-
 }
 
 .div2 {
@@ -36,8 +35,8 @@ html, body {
     border: 1rem ridge rgba(83, 43, 12, 0.562);
     border-radius: 7px;
     box-shadow: 4px 6px 7px rgba(90, 103, 116, 0.801);
-
 }
+
 .rulesTop {
     text-align: center;
     font-size: 1.5rem;
@@ -67,5 +66,15 @@ html, body {
     border: 1rem ridge rgba(83, 43, 12, 0.562);
     border-radius: 7px;
     box-shadow: 4px 6px 7px rgba(90, 103, 116, 0.801);
+}
 
+.div4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+    grid-row: 9/13;
+    grid-column: 1/13;
+    margin-bottom: 0;
+    font-family: monospace;
+    color: rgb(250, 235, 207);
+    justify-content: left;
+    align-content: flex-end;    
 }

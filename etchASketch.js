@@ -2,7 +2,6 @@ const container = document.querySelector('#container');
     container.style.placeContent = 'center';
     container.classList.add('container');
 
-
     const div1 = document.createElement('div');
         div1.classList.add('div1');
     
@@ -23,6 +22,7 @@ const container = document.querySelector('#container');
             rulesTop.style.alignContent = 'center';
             rulesTop.style.justifyContent = 'center';
             rulesTop.textContent = "Click an option below"
+        
         div2.appendChild(rulesTop);
 
         const btn1 = document.createElement('button');
@@ -32,7 +32,37 @@ const container = document.querySelector('#container');
 
         div2.appendChild(btn1);
 
+        const btn2 = document.createElement('button');
+        btn2.classList.add('btn');
+        btn2.style.marginTop = '20px';
+        btn2.style.background = 'rgba(90, 103, 116, 0.26)';
+        btn2.textContent = "Greyscale"
 
+        div2.appendChild(btn2);
+
+        const btn3 = document.createElement('button');
+        btn3.classList.add('btn');
+        btn3.style.marginTop = '20px';
+        btn3.style.background = 'rgba(238, 238, 238, .35)';
+        btn3.textContent = "Black"
+
+        div2.appendChild(btn3);
+
+        const btn4 = document.createElement('button');
+        btn4.classList.add('btn');
+        btn4.style.marginTop = '20px';
+        btn4.style.background = 'rgba(238, 238, 238, .35)';
+        btn4.textContent = "Resize"
+
+        div2.appendChild(btn4);
+
+        const btn5 = document.createElement('button');
+        btn5.classList.add('btn');
+        btn5.style.marginTop = '20px';
+        btn5.style.background = 'rgba(238, 238, 238, .35)';
+        btn5.textContent = "Reset"
+
+        div2.appendChild(btn5);
 
     container.appendChild(div2);
 
@@ -40,4 +70,12 @@ const container = document.querySelector('#container');
         div3.classList.add('div3');
     
     container.appendChild(div3);
+
+    const div4 = document.createElement('div');
+        div4.classList.add('div4');
+        div4.style.alignContent = 'left';
+        div4.style.justifyContent = 'left'
+        div4.textContent = "SometimesTheFur 2020"
+
+    container.appendChild(div4);
 
