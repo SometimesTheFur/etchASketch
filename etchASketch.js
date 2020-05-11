@@ -22,18 +22,22 @@ const container = document.querySelector('#container');
             rulesTop.classList.add('rulesTop');
             rulesTop.style.alignContent = 'center';
             rulesTop.style.justifyContent = 'center';
-            rulesTop.textContent = "Rules"
+            rulesTop.textContent = "Click an option below"
         div2.appendChild(rulesTop);
 
-        const rulesBody = document.createElement('ul');
-            rulesBody.classList.add('rulesBody');
-            rulesBody.style.alignContent = 'center';
-            rulesBody.style.justifyContent;
-            
-            const r1 = document.createTextNode("Test" + " Hello");
-            div2.appendChild(r1);
+        const btn1 = document.createElement('button');
+            btn1.classList.add('btn');
+            btn1.style.background = 'linear-gradient(to left, rgba(255, 0, 0, 0.26), rgba(255, 166, 0, 0.26), rgba(255, 255, 0, 0.26), rgba(0, 128, 0, 0.26), rgba(0, 0, 255, 0.26))';
+            btn1.textContent = "Rainbow"
 
-        div2.appendChild(rulesBody);
+        div2.appendChild(btn1);
+
+
 
     container.appendChild(div2);
+
+    const div3 = document.createElement('div');
+        div3.classList.add('div3');
+    
+    container.appendChild(div3);
 
