@@ -3,6 +3,7 @@ const container = document.querySelector('#container');
     container.classList.add('container');
 
     const div1 = document.createElement('div');
+        div1.id = "Header"
         div1.classList.add('div1');
     
         const title = document.createElement('p');
@@ -14,6 +15,7 @@ const container = document.querySelector('#container');
     container.appendChild(div1);
 
     const div2 = document.createElement('div');
+        div2.id = "buttonBox";
         div2.classList.add('div2');
 
         const rulesTop = document.createElement('p');
@@ -46,6 +48,7 @@ const container = document.querySelector('#container');
         div2.appendChild(black);
 
         const resize = document.createElement('button');
+            resize.id = "resize";
             resize.classList.add('btn');
             resize.style.marginTop = '20px';
             resize.style.background = 'rgba(254, 254, 254, 0.25)';
@@ -54,9 +57,13 @@ const container = document.querySelector('#container');
         div2.appendChild(resize);
 
         const reset = document.createElement('button');
+            reset.id = "reset";
             reset.classList.add('btn');
+            reset.addEventListener('click', function(){
+                location.reload();
+            });
             reset.style.marginTop = '20px';
-            reset.style.background = 'rgba(238, 238, 238, .60)';
+            reset.style.background = 'rgba(238, 238, 238, .75)';
             reset.textContent = "Reset";
 
         div2.appendChild(reset);
@@ -64,15 +71,27 @@ const container = document.querySelector('#container');
     container.appendChild(div2);
 
     const div3 = document.createElement('div');
+        div3.id = "gridBox";
         div3.classList.add('div3');
-    
+            const gridBox = document.querySelector('#gridBox');
+            
+            function grid(columns, rows) {
+                gridBox.style.setProperty('grid-columns', columns);
+                gridBox.style.setProperty('grid-rows', rows);
+
+                for(i = 0; i <= (columns * rows); i++);
+                    const pixel = document.createElement('div');
+                    gridBox.appendChild(pixel).classList.add('pixel');
+            }
+
     container.appendChild(div3);
 
     const div4 = document.createElement('div');
+        div4.id = "Footer";
         div4.classList.add('div4');
 
         const footer1 = document.createElement('p');
-            footer1.classList.add('footer1')
+            footer1.classList.add('footer1');
             footer1.textContent = "SometimesTheFur 2020";
 
         
