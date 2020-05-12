@@ -7,9 +7,8 @@ const container = document.querySelector('#container');
     
         const title = document.createElement('p');
             title.classList.add('title');
-            title.style.alignContent = 'center';
-            title.style.justifyContent = 'center';
-            title.textContent = "Etch A Sketch";
+            title.textContent = "H👾VER DOODLE";
+
         div1.appendChild(title);
     
     container.appendChild(div1);
@@ -19,50 +18,48 @@ const container = document.querySelector('#container');
 
         const rulesTop = document.createElement('p');
             rulesTop.classList.add('rulesTop');
-            rulesTop.style.alignContent = 'center';
-            rulesTop.style.justifyContent = 'center';
-            rulesTop.textContent = "Click an option below"
-        
+            rulesTop.textContent = "Click an option below";
+
         div2.appendChild(rulesTop);
 
-        const btn1 = document.createElement('button');
-            btn1.classList.add('btn');
-            btn1.style.background = 'linear-gradient(to left, rgba(255, 0, 0, 0.26), rgba(255, 166, 0, 0.26), rgba(255, 255, 0, 0.26), rgba(0, 128, 0, 0.26), rgba(0, 0, 255, 0.26))';
-            btn1.textContent = "Rainbow"
+        const rainbow = document.createElement('button');
+            rainbow.classList.add('btn');
+            rainbow.style.background = 'linear-gradient(to left, rgba(255, 0, 0, 0.26), rgba(255, 166, 0, 0.26), rgba(255, 255, 0, 0.26), rgba(0, 128, 0, 0.26), rgba(0, 0, 255, 0.26))';
+            rainbow.textContent = "Rainbow"
 
-        div2.appendChild(btn1);
+        div2.appendChild(rainbow);
 
-        const btn2 = document.createElement('button');
-        btn2.classList.add('btn');
-        btn2.style.marginTop = '20px';
-        btn2.style.background = 'rgba(90, 103, 116, 0.26)';
-        btn2.textContent = "Greyscale"
+        const greyscale = document.createElement('button');
+            greyscale.classList.add('btn');
+            greyscale.style.marginTop = '20px';
+            greyscale.style.background = 'rgba(90, 103, 116, 0.26)';
+            greyscale.textContent = "Greyscale";
 
-        div2.appendChild(btn2);
+        div2.appendChild(greyscale);
 
-        const btn3 = document.createElement('button');
-        btn3.classList.add('btn');
-        btn3.style.marginTop = '20px';
-        btn3.style.background = 'rgba(238, 238, 238, .35)';
-        btn3.textContent = "Black"
+        const black = document.createElement('button');
+            black.classList.add('btn');
+            black.style.marginTop = '20px';
+            black.style.background = 'rgba(90, 103, 116, 0.801)';
+            black.textContent = "Black";
 
-        div2.appendChild(btn3);
+        div2.appendChild(black);
 
-        const btn4 = document.createElement('button');
-        btn4.classList.add('btn');
-        btn4.style.marginTop = '20px';
-        btn4.style.background = 'rgba(238, 238, 238, .35)';
-        btn4.textContent = "Resize"
+        const resize = document.createElement('button');
+            resize.classList.add('btn');
+            resize.style.marginTop = '20px';
+            resize.style.background = 'rgba(254, 254, 254, 0.25)';
+            resize.textContent = "Resize";
 
-        div2.appendChild(btn4);
+        div2.appendChild(resize);
 
-        const btn5 = document.createElement('button');
-        btn5.classList.add('btn');
-        btn5.style.marginTop = '20px';
-        btn5.style.background = 'rgba(238, 238, 238, .35)';
-        btn5.textContent = "Reset"
+        const reset = document.createElement('button');
+            reset.classList.add('btn');
+            reset.style.marginTop = '20px';
+            reset.style.background = 'rgba(238, 238, 238, .60)';
+            reset.textContent = "Reset";
 
-        div2.appendChild(btn5);
+        div2.appendChild(reset);
 
     container.appendChild(div2);
 
@@ -73,9 +70,13 @@ const container = document.querySelector('#container');
 
     const div4 = document.createElement('div');
         div4.classList.add('div4');
-        div4.style.alignContent = 'left';
-        div4.style.justifyContent = 'left'
-        div4.textContent = "SometimesTheFur 2020"
+
+        const footer1 = document.createElement('p');
+            footer1.classList.add('footer1')
+            footer1.textContent = "SometimesTheFur 2020";
+
+        
+        div4.appendChild(footer1);
 
     container.appendChild(div4);
 
