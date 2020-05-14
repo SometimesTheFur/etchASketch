@@ -1,3 +1,7 @@
+:root {
+    --grid-rows: 1;
+    --grid-columns: 1;
+}
 html, body {
     padding: 0;
     margin: 0;
@@ -63,7 +67,7 @@ html, body {
     width: 75%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 500;
-    color: rgb(37, 44, 44, 0.89);
+    color: rgb(37, 44, 44, 0.9);
     font-size: 1.5rem;
     border-radius: 4px;
     box-shadow: 3px 4px 5px 2px rgba(43, 67, 76, 0.897);
@@ -72,6 +76,7 @@ html, body {
 }
 .btn:hover {
     opacity: 1;
+    transition: ease-in;
 }
 .btn:active {
     box-shadow: 0 5px #666;
@@ -85,15 +90,16 @@ html, body {
     border: 1rem ridge rgba(83, 43, 12, 0.562);
     border-radius: 7px;
     box-shadow: 4px 6px 7px rgba(90, 103, 116, 0.801);
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
 }
 
-#gridBox {
-    display: grid;
-    grid-template-columns: repeat(var('grid-columns'), 1fr);
-    grid-template-rows: repeat(var('grid-rows'), 1fr);
-}
-.pixel {
-    transition: .4s;
+
+.pixel:hover {
+    transition: ease-in;
+    background-color: black;
+    
 
 }
 

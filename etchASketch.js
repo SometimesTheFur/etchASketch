@@ -1,5 +1,9 @@
-const container = document.querySelector('#container');
-    container.style.placeContent = 'center';
+//constants
+
+//variables
+let pixels = 16;
+
+const container = document.querySelector('div');
     container.classList.add('container');
 
     const div1 = document.createElement('div');
@@ -36,6 +40,9 @@ const container = document.querySelector('#container');
             greyscale.style.marginTop = '20px';
             greyscale.style.background = 'rgba(90, 103, 116, 0.26)';
             greyscale.textContent = "Greyscale";
+            greyscale.addEventListener('click', () => {
+                pixel.style.Color = 'grey';
+            });
 
         div2.appendChild(greyscale);
 
@@ -53,8 +60,20 @@ const container = document.querySelector('#container');
             resize.style.marginTop = '20px';
             resize.style.background = 'rgba(254, 254, 254, 0.25)';
             resize.textContent = "Resize";
-
         div2.appendChild(resize);
+            resize.addEventListener('click', () => {
+                //const grid = document.getElementById('gridbox');
+                let pixelsInput = prompt("What size canvas? 16x16, 32x32, or 64x64?");
+                if (pixelsInput === 16){
+                    return pixels = 16;
+                }else if(pixelsInput === 32) {
+                    return pixels = 32;
+                }else if(pixelsInput === 64){
+                    return pixels = 64;
+                }
+            });
+
+
 
         const reset = document.createElement('button');
             reset.id = "reset";
@@ -70,29 +89,33 @@ const container = document.querySelector('#container');
 
     container.appendChild(div2);
 
-    const div3 = document.createElement('div');
-        div3.id = "gridBox";
-        div3.classList.add('div3');
-            const gridBox = document.querySelector('#gridBox');
-            
-            function grid(columns, rows) {
-                gridBox.style.setProperty('grid-columns', columns);
-                gridBox.style.setProperty('grid-rows', rows);
-
-                for(i = 0; i <= (columns * rows); i++);
+        const div3 = document.createElement('div');
+            div3.id = "gridBox";
+            div3.classList.add('div3');
                     const pixel = document.createElement('div');
-                    gridBox.appendChild(pixel).classList.add('pixel');
-            }
-
+                    pixel.classList.add('pixel');
+                        const grid = document.getElementById('gridBox');
+                        const pixelCpy = document.getElementsByClassName('pixel');
+                        //const pixelClone = pixelCpy.cloneNode(false); 
+                    setGrid = (pixels) => {
+                        div3.style.gridTemplateColumns = "repeat('pixels', 1fr)";
+                        div3.style.gridTemplateRows = "repeat('pixels', 1fr)";
+                        for(i = 0; i < (pixels * pixels - 1); i++) {
+                            console.log([i]);
+                            div3.appendChild(pixel);
+                            
+                        }div3.appendChild(pixel);
+                    };   
+        div3.appendChild(pixel);
     container.appendChild(div3);
 
-    const div4 = document.createElement('div');
-        div4.id = "Footer";
-        div4.classList.add('div4');
+        const div4 = document.createElement('div');
+            div4.id = "Footer";
+            div4.classList.add('div4');
 
-        const footer1 = document.createElement('p');
-            footer1.classList.add('footer1');
-            footer1.textContent = "SometimesTheFur 2020";
+            const footer1 = document.createElement('p');
+                footer1.classList.add('footer1');
+                footer1.textContent = "SometimesTheFur 2020";
 
         
         div4.appendChild(footer1);
