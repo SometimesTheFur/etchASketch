@@ -1,7 +1,7 @@
 //constants
 
 //variables
-let pixels = 16;
+
 
 const container = document.querySelector('div');
     container.classList.add('container');
@@ -32,6 +32,9 @@ const container = document.querySelector('div');
             rainbow.classList.add('btn');
             rainbow.style.background = 'linear-gradient(to left, rgba(255, 0, 0, 0.26), rgba(255, 166, 0, 0.26), rgba(255, 255, 0, 0.26), rgba(0, 128, 0, 0.26), rgba(0, 0, 255, 0.26))';
             rainbow.textContent = "Rainbow"
+            rainbow.addEventListener('click', () => {
+                pixel.style.backgroundColor = 'pink';   
+            })
 
         div2.appendChild(rainbow);
 
@@ -41,7 +44,7 @@ const container = document.querySelector('div');
             greyscale.style.background = 'rgba(90, 103, 116, 0.26)';
             greyscale.textContent = "Greyscale";
             greyscale.addEventListener('click', () => {
-                pixel.style.Color = 'grey';
+                pixel.style.backgroundColor = 'grey';
             });
 
         div2.appendChild(greyscale);
@@ -51,6 +54,9 @@ const container = document.querySelector('div');
             black.style.marginTop = '20px';
             black.style.background = 'rgba(90, 103, 116, 0.801)';
             black.textContent = "Black";
+            black.addEventListener('click', () => {
+                pixel.style.backgroundColor = 'black';
+            }) 
 
         div2.appendChild(black);
 
@@ -61,17 +67,6 @@ const container = document.querySelector('div');
             resize.style.background = 'rgba(254, 254, 254, 0.25)';
             resize.textContent = "Resize";
         div2.appendChild(resize);
-            resize.addEventListener('click', () => {
-                //const grid = document.getElementById('gridbox');
-                let pixelsInput = prompt("What size canvas? 16x16, 32x32, or 64x64?");
-                if (pixelsInput === 16){
-                    return pixels = 16;
-                }else if(pixelsInput === 32) {
-                    return pixels = 32;
-                }else if(pixelsInput === 64){
-                    return pixels = 64;
-                }
-            });
 
 
 
@@ -92,21 +87,48 @@ const container = document.querySelector('div');
         const div3 = document.createElement('div');
             div3.id = "gridBox";
             div3.classList.add('div3');
-                    const pixel = document.createElement('div');
-                    pixel.classList.add('pixel');
-                        const grid = document.getElementById('gridBox');
-                        const pixelCpy = document.getElementsByClassName('pixel');
-                        //const pixelClone = pixelCpy.cloneNode(false); 
-                    setGrid = (pixels) => {
-                        div3.style.gridTemplateColumns = "repeat('pixels', 1fr)";
-                        div3.style.gridTemplateRows = "repeat('pixels', 1fr)";
-                        for(i = 0; i < (pixels * pixels - 1); i++) {
+            const grid = document.getElementById('gridBox');
+            const pixel = document.createElement('div');
+                pixel.classList.add('pixel')
+                pixel.onmouseover = () => {
+                    pixel.style.backgroundColor = 'violet';
+                };
+
+
+                    let pixels = 16;
+                    //setGrid = (pixels) => {
+                        for(i = 0; i < (pixels * pixels); i++) {
                             console.log([i]);
+                            const pixel = document.createElement('div');
+                            pixel.classList.add('pixel');
                             div3.appendChild(pixel);
                             
-                        }div3.appendChild(pixel);
-                    };   
-        div3.appendChild(pixel);
+                        }
+                    //};   
+        resize.addEventListener('click', () => {
+            //const grid = document.getElementById('gridbox');
+            let pixelsInput = prompt("What size canvas? 16x16, 32x32, or 64x64?");
+            if (pixelsInput === 16){
+                let pixels = 16;
+                return pixels+
+                (grid.style.gridTemplateColumns = "repeat(16, 1fr)")+
+                (grid.style.gridTemplateRows = "repeat(16, 1fr)");
+                
+            }else if(pixelsInput === 32) {
+                let pixels = 32;
+                return pixels+
+                (grid.style.gridTemplateColumns = "repeat(32, 1fr)")+
+                (grid.style.gridTemplateRows = "repeat(32, 1fr)");
+            }else if(pixelsInput === 64){
+                let pixels = 64;
+                return pixels+
+                (grid.style.gridTemplateColumns = "repeat(64, 1fr)")+
+                (grid.style.gridTemplateRows = "repeat(64, 1fr)");
+            }                      
+            //setGrid(pixels);
+            //grid.style.gridTemplateColumns = "repeat('pixels', 1fr)";
+            //grid.style.gridTemplateRows = "repeat('pixels', 1fr)";
+        });
     container.appendChild(div3);
 
         const div4 = document.createElement('div');
