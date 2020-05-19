@@ -4,7 +4,7 @@
 html, body {
     padding: 0;
     margin: 0;
-    background: rgba(91, 112, 131, 0.308);
+    background: rgba(91, 112, 131, 0.363);
     color: #222;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -41,7 +41,6 @@ html, body {
     align-content: center;
     justify-content: center;
     display: grid;
-    /*border: .5rem ridge rgba(83, 43, 12, 0.562);*/
     border-radius: 5px;
     box-shadow: 7px 7px 20px rgba(90, 103, 116, 0.801);
 }
@@ -86,7 +85,6 @@ html, body {
     background-color: rgb(184, 176, 173);
     grid-row: 2/9;
     grid-column: 7/19;
-    /*border: 1rem ridge rgba(83, 43, 12, 0.562);*/
     border-radius: 5px;
     box-shadow: 7px 7px 20px rgba(90, 103, 116, 0.801);
     display: grid;
@@ -95,12 +93,12 @@ html, body {
 }
 
 .pixel:hover {
-    transition: ease-in;
-    background-color: black;
+    transition: cubic-bezier(0.79, -0.15, 1, 1);
+    background-color: rgba(68, 62, 62, 0.39);
 }
 
 .div4 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(255, 255, 255));
     grid-row: 9/13;
     grid-column: 1/25;
     margin-bottom: 0;
@@ -113,7 +111,7 @@ html, body {
     justify-self: center;
     font-family: monospace;
     font-size: 1.5rem;
-    color: rgba(250, 235, 207, 0.801);
+    color: rgba(63, 57, 47, 0.801);
     align-self: flex-end;
     margin-left: .5rem;
 }
