@@ -32,8 +32,7 @@ container.appendChild(div1);
     div2.appendChild(rainbowBtn);
 
         const greyscaleBtn = document.createElement('button');
-            //greyscaleBtn.id = 'greyscale'
-            greyscaleBtn.classList.add('btn', 'greyscale');
+            greyscaleBtn.classList.add('btn');
             greyscaleBtn.style.marginTop = '20px';
             greyscaleBtn.style.background = 'rgba(90, 103, 116, 0.26)';
             greyscaleBtn.textContent = "Greyscale";
@@ -78,6 +77,7 @@ container.appendChild(div2);
             const grid = document.getElementById('gridBox');
             const pixel = document.createElement('div');
                 pixel.classList.add('pixel');
+
 //To create the initial grid
         let pixels = 16;
             for(i = 0; i < (pixels * pixels); i++) {
@@ -139,29 +139,22 @@ function blackPixel(e) {
     e.target.classList.remove('greyscale');
     e.target.style.backgroundColor = 'rgb(0, 0, 0)';
     e.target.style.border = 'none';
+    e.target.style. opacity = 1;
 }
 function greyPixel(e) {
-    if (!e.target.classList.contains('greyscale')) {
-        e.target.style.backgroundColor = darkenColor('rgb(255, 255, 255)');
-        e.target.classList.add('greyscale');
-    }
+    e.target.classList.add('greyscale')
+    pixel.style.opacity = 0;
+    let newOpacity = Number(pixel.style.opacity);
+    e.target.style.opacity = (newOpacity + 0.5);
+    e.target.style.backgroundColor = 'rbg(0, 0, 0)';
     e.target.style.border = 'none';
+    console.log(newOpacity);
 }
 function rainbowPixel(e) {
-    e.target.classList.remove('greyscale');
+    e.target.classList.remove('greyscale')
     e.target.style.backgroundColor =
         `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
     e.target.style.border = 'none';
+    e.target.style.opacity = 1;
 }
-let color = 'rgb(255, 255, 255)';
-function darkenColor(color) {
-    const colorValues = color.slice(4, color.Length - 1).split(', ');
-    
-    let amt = Math.round(2.55 * 10);
 
-    let R = colorValues[0] - amt;
-    let G = colorValues[1] - amt;
-    let B = colorValues[2] - amt;
-
-    console.log(`rgb(${R}, ${G}, ${B})`);
-}
