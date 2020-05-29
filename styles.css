@@ -96,7 +96,9 @@ html, body {
     transition: cubic-bezier(0.79, -0.15, 1, 1);
     background-color: rgba(68, 62, 62, 0.39);
 }
-
+.greyscale {
+    opacity: initial + 0.5;
+}
 .div4 {
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(255, 255, 255));
     grid-row: 9/13;
